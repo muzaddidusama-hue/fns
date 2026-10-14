@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Admin Dashboard | FNS - Faizan Network Solution</title>
+  
+  <link rel="icon" href="assets/images/favicon-32x32.png" sizes="32x32" type="image/png"/>
+  <link rel="stylesheet" href="assets/css/layout.css"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <link rel="stylesheet" href="assets/css/custom.css"/>
+</head>
+<body class="bg-slate-100 text-slate-900 dark:bg-black dark:text-white antialiased min-h-screen">
+
+  <!-- ============================================== -->
+  <!-- 1. LOGIN VIEW (Shown when unauthenticated)     -->
+  <!-- ============================================== -->
+  <div id="admin-login-view" class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-slate-900 via-blue-950 to-black">
+    <div class="w-full max-w-md p-8 rounded-3xl bg-white/95 dark:bg-zinc-900/90 border border-slate-200 dark:border-zinc-800 shadow-2xl backdrop-blur-xl">
+      <div class="text-center mb-6">
+        <a href="index.html" class="inline-block">
+          <img src="assets/images/fns-logo-dark.svg" alt="FNS - Faizan Network Solution" class="fns-logo-img h-12 mx-auto object-contain">
+        </a>
+        <h2 class="text-xl font-black text-slate-900 dark:text-white mt-4">Admin Management Portal</h2>
+        <p class="text-xs text-slate-500 dark:text-zinc-400 mt-1">Log in to manage orders, customer inquiries, and quotations.</p>
+      </div>
+
+      <div id="login-error-msg" class="hidden mb-4 p-3 rounded-xl bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-800 text-xs font-bold text-red-600 dark:text-red-400 text-center"></div>
+
+      <form id="admin-login-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 dark:text-zinc-300 mb-1">Username</label>
+          <input type="text" id="admin-username" required placeholder="admin" value="admin" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-700 bg-slate-50 dark:bg-zinc-800 text-sm font-medium text-slate-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 dark:text-zinc-300 mb-1">Password</label>
+          <input type="password" id="admin-password" required placeholder="••••••••" value="fns2026" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-700 bg-slate-50 dark:bg-zinc-800 text-sm font-medium text-slate-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-black text-xs uppercase tracking-wider shadow-lg shadow-blue-600/30 transition-transform active:scale-95">
+          Sign In to Dashboard
+        </button>
+
+        <div class="pt-2 text-center">
+          <button type="button" id="btn-fill-demo" class="text-xs text-blue-500 hover:underline font-semibold">
+            Fill Demo Credentials (admin / fns2026)
+          </button>
+        </div>
+      </form>
+
+      <div class="mt-6 pt-4 border-t border-slate-200 dark:border-zinc-800 text-center">
+        <a href="index.html" class="text-xs font-bold text-slate-500 hover:text-slate-800 dark:hover:text-zinc-200 flex items-center justify-center gap-1.5">
+          ← Return to Public Website
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================== -->
+  <!-- 2. DASHBOARD VIEW (Shown when authenticated)   -->
+  <!-- ============================================== -->
+  <div id="admin-dashboard-view" class="hidden min-h-screen flex flex-col lg:flex-row">
+    
+    <!-- Sidebar -->
+    <aside id="admin-sidebar" class="fixed inset-y-0 left-0 z-40 w-64 bg-white dark:bg-zinc-950 border-r border-slate-200 dark:border-zinc-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out flex flex-col justify-between p-4 shadow-xl lg:shadow-none">
+      <div>
+        <!-- Sidebar Brand -->
+        <div class="flex items-center justify-between pb-6 border-b border-slate-100 dark:border-zinc-800 px-2">
+          <a href="index.html" class="flex items-center gap-2">
+            <img src="assets/images/fns-logo-dark.svg" alt="FNS" class="fns-logo-img h-9 w-auto">
+          </a>
+        </div>
+
+        <!-- Sidebar Navigation -->
+        <nav class="mt-6 space-y-1.5">
+          <a href="#overview" data-tab="overview" class="admin-nav-tab flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-extrabold bg-blue-600 text-white transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+              <span>Dashboard</span>
+            </div>
+          </a>
+
+          <a href="#orders" data-tab="orders" class="admin-nav-tab flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-600 dark:text-zinc-400 hover:bg-slate-100 dark:hover:bg-zinc-900 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              <span>Orders & Quotes</span>
+            </div>
+            <span class="badge-pending-orders hidden px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-500 text-white">0</span>
+          </a>
+
+          <a href="#messages" data-tab="messages" class="admin-nav-tab flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-600 dark:text-zinc-400 hover:bg-slate-100 dark:hover:bg-zinc-900 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>Inquiries & Messages</span>
+            </div>
+            <span class="badge-unread-messages hidden px-2 py-0.5 rounded-full text-[10px] font-black bg-blue-500 text-white">0</span>
+          </a>
+
+          <a href="#products" data-tab="products" class="admin-nav-tab flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-600 dark:text-zinc-400 hover:bg-slate-100 dark:hover:bg-zinc-900 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+              <span>Inventory (29)</span>
+            </div>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Sidebar Footer -->
+      <div class="pt-4 border-t border-slate-100 dark:border-zinc-800 space-y-2">
+        <a href="index.html" target="_blank" class="flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-bold text-slate-600 dark:text-zinc-400 hover:bg-slate-100 dark:hover:bg-zinc-900">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          <span>View Public Site</span>
+        </a>
+        <button class="admin-logout-btn w-full flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-bold text-red-600 hover:bg-red-50 dark:hover:bg-red-950/40 text-left">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+          <span>Sign Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="flex-1 lg:pl-64 flex flex-col min-w-0">
+      
+      <!-- Top Header -->
+      <header class="sticky top-0 z-30 h-16 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-slate-200 dark:border-zinc-800 px-4 sm:px-6 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <button id="admin-sidebar-toggle" class="lg:hidden p-2 rounded-xl text-slate-700 dark:text-zinc-300 hover:bg-slate-100 dark:hover:bg-zinc-800">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+          </button>
+          <h2 class="text-base font-extrabold text-slate-900 dark:text-white">FNS Administration Portal</h2>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <!-- Theme Toggle -->
+          <button type="button" aria-label="Toggle Theme" class="theme-toggle-btn p-2 rounded-xl text-slate-700 dark:text-zinc-200 hover:bg-slate-100 dark:hover:bg-zinc-800">
+            <svg class="theme-icon-moon w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="theme-icon-sun w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </button>
+
+          <div class="flex items-center gap-2 pl-3 border-l border-slate-200 dark:border-zinc-800">
+            <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-black text-xs flex items-center justify-center">A</div>
+            <span class="text-xs font-bold text-slate-800 dark:text-zinc-200 hidden sm:inline">Admin (Uttara)</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content Panes -->
+      <main class="flex-1 p-4 sm:p-6 lg:p-8 space-y-6">
+
+        <!-- TAB 1: OVERVIEW -->
+        <div id="tab-overview" class="admin-tab-pane space-y-6">
+          <!-- Metric KPI Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-xs flex items-center justify-between">
+              <div>
+                <span class="text-xs font-bold text-slate-500 dark:text-zinc-400">Total Orders / Quotes</span>
+                <div id="stat-total-orders" class="text-2xl font-black text-slate-900 dark:text-white mt-1">0</div>
+                <span class="text-[10px] text-emerald-500 font-bold">↑ Active Inquiries</span>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-xs flex items-center justify-between">
+              <div>
+                <span class="text-xs font-bold text-slate-500 dark:text-zinc-400">Pending Orders</span>
+                <div id="stat-pending-orders" class="text-2xl font-black text-amber-500 mt-1">0</div>
+                <span class="text-[10px] text-amber-500 font-bold">Requires Follow-up</span>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/60 text-amber-500 flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-xs flex items-center justify-between">
+              <div>
+                <span class="text-xs font-bold text-slate-500 dark:text-zinc-400">Total Inquiries</span>
+                <div id="stat-total-messages" class="text-2xl font-black text-slate-900 dark:text-white mt-1">0</div>
+                <span class="text-[10px] text-blue-500 font-bold">Via Contact Form</span>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-xs flex items-center justify-between">
+              <div>
+                <span class="text-xs font-bold text-slate-500 dark:text-zinc-400">Unread Messages</span>
+                <div id="stat-unread-messages" class="text-2xl font-black text-blue-600 mt-1">0</div>
+                <span class="text-[10px] text-blue-500 font-bold">New Leads</span>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-cyan-50 dark:bg-cyan-950/60 text-cyan-600 flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Two Column Recent Section -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            <!-- Recent Orders -->
+            <div class="lg:col-span-8 p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-xs">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Recent Hardware Quotation Requests</h3>
+                <button onclick="switchTab('orders')" class="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">View All →</button>
+              </div>
+              <div class="table-responsive">
+                <table class="w-full text-left text-xs">
+                  <thead>
+                    <tr class="border-b border-slate-100 dark:border-zinc-800 text-slate-400 font-bold">
+                      <th class="p-3">Order #</th>
+                      <th class="p-3">Client</th>
+                      <th class="p-3">Phone</th>
+                      <th class="p-3">Equipment</th>
+                      <th class="p-3">Status</th>
+                      <th class="p-3">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="overview-recent-orders" class="divide-y divide-slate-100 dark:divide-zinc-800">
+                    <!-- Injected by admin.js -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Recent Messages -->
+            <div class="lg:col-span-4 p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-xs flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Recent Customer Inquiries</h3>
+                  <button onclick="switchTab('messages')" class="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline">View All →</button>
+                </div>
+                <div id="overview-recent-messages" class="space-y-3">
+                  <!-- Injected by admin.js -->
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-slate-100 dark:border-zinc-800 flex items-center justify-between text-xs text-slate-500">
+                <span>Direct WhatsApp Hotline:</span>
+                <a href="https://wa.me/8801613410777" target="_blank" class="font-bold text-[#25D366] hover:underline">01613410777</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- TAB 2: ORDERS & QUOTATIONS -->
+        <div id="tab-orders" class="admin-tab-pane hidden space-y-4">
+          <div class="p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-xs">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+              <div>
+                <h3 class="text-xl font-black text-slate-900 dark:text-white">Orders &amp; Quotation Requests</h3>
+                <p id="orders-filtered-count" class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Showing all orders</p>
+              </div>
+
+              <!-- Search and Filters -->
+              <div class="flex flex-wrap items-center gap-2">
+                <input type="text" id="order-search-input" placeholder="Search client, phone, item..." class="px-3.5 py-2 rounded-xl text-xs bg-slate-50 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 text-slate-900 dark:text-white focus:outline-hidden w-48 sm:w-64">
+                
+                <select id="order-status-filter" class="px-3.5 py-2 rounded-xl text-xs bg-slate-50 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 text-slate-900 dark:text-white font-bold focus:outline-hidden">
+                  <option value="all">All Statuses</option>
+                  <option value="Pending">Pending</option>
+                  <option value="Contacted">Contacted</option>
+                  <option value="In Progress">In Progress</option>
+                  <option value="Quoted">Quoted</option>
+                  <option value="Delivered">Delivered</option>
+                  <option value="Cancelled">Cancelled</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Orders Table -->
+            <div class="table-responsive">
+              <table class="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr class="border-b border-slate-200 dark:border-zinc-800 text-slate-400 font-bold bg-slate-50/50 dark:bg-zinc-800/30">
+                    <th class="p-3.5">ID</th>
+                    <th class="p-3.5">Customer / Company</th>
+                    <th class="p-3.5">Contact Details</th>
+                    <th class="p-3.5">Equipment / Items</th>
+                    <th class="p-3.5">Date</th>
+                    <th class="p-3.5">Status</th>
+                    <th class="p-3.5 text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="orders-table-body" class="divide-y divide-slate-100 dark:divide-zinc-800">
+                  <!-- Injected via admin.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- TAB 3: CUSTOMER MESSAGES -->
+        <div id="tab-messages" class="admin-tab-pane hidden space-y-4">
+          <div class="p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-xs">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+              <div>
+                <h3 class="text-xl font-black text-slate-900 dark:text-white">Customer Inquiries &amp; Contact Messages</h3>
+                <p id="messages-count-badge" class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">Showing inquiries</p>
+              </div>
+
+              <!-- Search & Filters -->
+              <div class="flex flex-wrap items-center gap-2">
+                <input type="text" id="msg-search-input" placeholder="Search message, sender, email..." class="px-3.5 py-2 rounded-xl text-xs bg-slate-50 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 text-slate-900 dark:text-white focus:outline-hidden w-48 sm:w-64">
+                
+                <select id="msg-status-filter" class="px-3.5 py-2 rounded-xl text-xs bg-slate-50 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 text-slate-900 dark:text-white font-bold focus:outline-hidden">
+                  <option value="all">All Messages</option>
+                  <option value="unread">Unread Only</option>
+                  <option value="read">Read Only</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Messages List -->
+            <div id="messages-list-container" class="space-y-3">
+              <!-- Injected via admin.js -->
+            </div>
+          </div>
+        </div>
+
+
+        <!-- TAB 4: PRODUCT INVENTORY -->
+        <div id="tab-products" class="admin-tab-pane hidden space-y-4">
+          <div class="p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-xs">
+            <div class="flex items-center justify-between mb-6">
+              <div>
+                <h3 class="text-xl font-black text-slate-900 dark:text-white">Product Catalog &amp; Hardware Inventory</h3>
+                <p class="text-xs text-slate-500 dark:text-zinc-400 mt-0.5">29 enterprise products live on the website</p>
+              </div>
+              <a href="shop.html" target="_blank" class="px-4 py-2 rounded-xl bg-blue-600 text-white text-xs font-bold hover:bg-blue-500">
+                Open Public Shop →
+              </a>
+            </div>
+
+            <div id="products-admin-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4">
+              <!-- Injected via admin.js -->
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+
+  <!-- ============================================== -->
+  <!-- 3. DETAIL MODAL                                -->
+  <!-- ============================================== -->
+  <div id="admin-modal" class="modal-overlay">
+    <div class="modal-box p-0 max-w-2xl relative">
+      <button onclick="closeAdminModal()" class="absolute top-4 right-4 z-20 p-2 rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-zinc-200 hover:bg-slate-200">✕</button>
+      <div id="admin-modal-content">
+        <!-- Injected via admin.js -->
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

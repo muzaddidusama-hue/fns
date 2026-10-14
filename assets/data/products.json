@@ -1,0 +1,1142 @@
+[
+  {
+    "id": "fns-x28",
+    "slug": "fns-x28-standard-pc-mikrotik",
+    "name": "FNS X28 Standard PC MikroTik Router Server",
+    "category": "pc-mikrotik",
+    "categoryName": "PC MikroTik Router Servers",
+    "brand": "MikroTik / FNS",
+    "price": "Price on Request",
+    "image": "assets/images/Inovexa_X6_Enterprise_MikroTik_Router_Server.webp",
+    "badge": "Popular ISP Choice",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Xeon E5-2680 V4 (28 vCPUs)"
+      },
+      {
+        "label": "Memory",
+        "value": "32GB DDR4 ECC Registered RAM"
+      },
+      {
+        "label": "Networking",
+        "value": "2 × 10GbE SFP+ + 4 × 1GbE RJ45 Ports"
+      },
+      {
+        "label": "Storage",
+        "value": "240GB Enterprise SATA SSD"
+      },
+      {
+        "label": "Operating System",
+        "value": "RouterOS v7 Level 6 Pre-activated"
+      },
+      {
+        "label": "Bandwidth Capacity",
+        "value": "Up to 5 Gbps Traffic Throughput"
+      },
+      {
+        "label": "Concurrent Users",
+        "value": "1,500 - 3,000 PPPoE / Hotspot Users"
+      }
+    ],
+    "features": [
+      "Optimized for Medium ISP Bandwidth Management & PPPoE Server",
+      "Full BGP Routing Table capable with Fast Route Convergence",
+      "Dynamic Queues, Simple Queues, and FastPath acceleration enabled",
+      "1U Rackmount Server Chassis with High-Efficiency 550W PSU"
+    ],
+    "description": "The FNS X28 Standard PC MikroTik Router Server is an ultra-reliable, high-throughput routing engine designed specifically for regional ISPs, large enterprises, and multi-tenant campuses in Bangladesh."
+  },
+  {
+    "id": "fns-x32",
+    "slug": "fns-x32-professional-pc-mikrotik",
+    "name": "FNS X32 Professional PC MikroTik Router Server",
+    "category": "pc-mikrotik",
+    "categoryName": "PC MikroTik Router Servers",
+    "brand": "MikroTik / FNS",
+    "price": "Price on Request",
+    "image": "assets/images/Inovexa_X8_Enterprise_MikroTik_Router_Server.webp",
+    "badge": "Enterprise Grade",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Xeon E5-2683 V4 (32 vCPUs)"
+      },
+      {
+        "label": "Memory",
+        "value": "64GB DDR4 ECC Registered RAM"
+      },
+      {
+        "label": "Networking",
+        "value": "4 × 10GbE SFP+ (Intel 82599ES Controller)"
+      },
+      {
+        "label": "Storage",
+        "value": "480GB Enterprise SATA SSD"
+      },
+      {
+        "label": "Operating System",
+        "value": "RouterOS v7 Level 6 Pre-activated"
+      },
+      {
+        "label": "Bandwidth Capacity",
+        "value": "Up to 10 Gbps Traffic Throughput"
+      },
+      {
+        "label": "Concurrent Users",
+        "value": "3,000 - 5,000 PPPoE Sessions"
+      }
+    ],
+    "features": [
+      "Hardware-accelerated packet filtering & NAT firewall rules",
+      "BGP Multihoming with dual upstream transit provider connections",
+      "Redundant cooling fans and industrial chassis build",
+      "Custom kernel tuning for zero packet loss during peak traffic hours"
+    ],
+    "description": "The FNS X32 Professional delivers rock-solid performance with 32 processing threads and dedicated Intel 10G SFP+ interfaces, ensuring flawless handling of high packet-per-second ISP loads."
+  },
+  {
+    "id": "fns-x40",
+    "slug": "fns-x40-professional-pc-mikrotik",
+    "name": "FNS X40 Professional PC MikroTik Router Server",
+    "category": "pc-mikrotik",
+    "categoryName": "PC MikroTik Router Servers",
+    "brand": "MikroTik / FNS",
+    "price": "Price on Request",
+    "image": "assets/images/Inovexa_X8_Enterprise_MikroTik_Router_Server.webp",
+    "badge": "High Throughput",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Xeon Dual E5-2660 V3 (40 vCPUs)"
+      },
+      {
+        "label": "Memory",
+        "value": "64GB DDR4 ECC Registered RAM"
+      },
+      {
+        "label": "Networking",
+        "value": "4 × 10GbE SFP+ Intel X520-DA2 Dual Cards"
+      },
+      {
+        "label": "Storage",
+        "value": "480GB Enterprise Server SSD"
+      },
+      {
+        "label": "Operating System",
+        "value": "RouterOS v7 Level 6 Pre-activated"
+      },
+      {
+        "label": "Bandwidth Capacity",
+        "value": "Up to 15 Gbps Real Traffic Routing"
+      },
+      {
+        "label": "Concurrent Users",
+        "value": "5,000 - 8,000 PPPoE Users"
+      }
+    ],
+    "features": [
+      "Dual Intel Xeon multi-socket architecture with NUMA balancing",
+      "Zero jitter QoS traffic shaping for VoIP, Gaming & Streaming",
+      "Hot-swap redundant power supply option available",
+      "Tested and certified in Dhaka ISP network environments"
+    ],
+    "description": "Engineered for high-density core routing, the FNS X40 effortlessly manages multiple BGP peers, upstream bandwidth aggregation, and thousands of simultaneous subscriber queues."
+  },
+  {
+    "id": "fns-x44",
+    "slug": "fns-x44-enterprise-pc-mikrotik",
+    "name": "FNS X44 Enterprise PC MikroTik Router Server",
+    "category": "pc-mikrotik",
+    "categoryName": "PC MikroTik Router Servers",
+    "brand": "MikroTik / FNS",
+    "price": "Price on Request",
+    "image": "assets/images/Inovexa_X44D_Enterprise_MikroTik_Router_Server-v2.webp",
+    "badge": "Carrier Grade",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Intel Xeon E5-2696 V4 (44 vCPUs)"
+      },
+      {
+        "label": "Memory",
+        "value": "128GB DDR4 ECC Registered RAM"
+      },
+      {
+        "label": "Networking",
+        "value": "4 × 10GbE SFP+ + 2 × 1GbE Management"
+      },
+      {
+        "label": "Storage",
+        "value": "960GB Enterprise NVMe SSD"
+      },
+      {
+        "label": "Operating System",
+        "value": "RouterOS Level 6 License"
+      },
+      {
+        "label": "Bandwidth Capacity",
+        "value": "Up to 20 Gbps Throughput"
+      },
+      {
+        "label": "Concurrent Users",
+        "value": "8,000 - 12,000 PPPoE Sessions"
+      }
+    ],
+    "features": [
+      "44 High-frequency vCPUs tackling intense CGNAT & BGP filtering",
+      "Ultra-low latency memory subsystem with quad-channel ECC",
+      "2U Heavy-duty rackmount server chassis with redundant fans",
+      "Comprehensive diagnostic dashboard and remote IPMI management"
+    ],
+    "description": "Designed for nationwide ISPs and large data centers, the FNS X44 delivers unmatched processing muscle for heavy Carrier Grade NAT (CGNAT), BGP route reflection, and large subscriber pools."
+  },
+  {
+    "id": "fns-x44d",
+    "slug": "fns-x44d-enterprise-pc-mikrotik",
+    "name": "FNS X44D Enterprise PC MikroTik Router Server (Dual Edition)",
+    "category": "pc-mikrotik",
+    "categoryName": "PC MikroTik Router Servers",
+    "brand": "MikroTik / FNS",
+    "price": "Price on Request",
+    "image": "assets/images/Inovexa_X44D_Enterprise_MikroTik_Router_Server-v2.webp",
+    "badge": "Dual Socket Flagship",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Dual Intel Xeon E5-2680 V4 (56 vCPUs total)"
+      },
+      {
+        "label": "Memory",
+        "value": "128GB DDR4 ECC Registered RAM"
+      },
+      {
+        "label": "Networking",
+        "value": "6 × 10GbE SFP+ (Intel X710 & X520)"
+      },
+      {
+        "label": "Storage",
+        "value": "1TB Enterprise Grade SATA SSD"
+      },
+      {
+        "label": "Operating System",
+        "value": "RouterOS Level 6 License"
+      },
+      {
+        "label": "Bandwidth Capacity",
+        "value": "25+ Gbps Sustained Routing"
+      },
+      {
+        "label": "Redundancy",
+        "value": "Dual Redundant Hot-Plug 750W PSUs"
+      }
+    ],
+    "features": [
+      "Dual CPU Architecture with 56 physical threads for extreme packet volume",
+      "N+1 Hot-swappable enterprise power supplies for 99.999% uptime",
+      "Advanced thermal dissipation design for continuous 24/7/365 datacenter load",
+      "Pre-tuned for zero drop rate under full line-rate traffic"
+    ],
+    "description": "The Dual Edition FNS X44D is the gold standard for high-resilience ISP core infrastructure, combining dual enterprise Xeon processors, redundant power, and multiple 10G optical links."
+  },
+  {
+    "id": "fns-x56",
+    "slug": "fns-x56-enterprise-pc-mikrotik",
+    "name": "FNS X56 Enterprise PC MikroTik Router Server",
+    "category": "pc-mikrotik",
+    "categoryName": "PC MikroTik Router Servers",
+    "brand": "MikroTik / FNS",
+    "price": "Price on Request",
+    "image": "assets/images/Inovexa_X56_Enterprise_MikroTik_Router_Server-v2.webp",
+    "badge": "56 Cores Beast",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Dual Intel Xeon E5-2680 V4 (56 Cores)"
+      },
+      {
+        "label": "Memory",
+        "value": "128GB DDR4 ECC Registered RAM"
+      },
+      {
+        "label": "Networking",
+        "value": "2 × 40GbE QSFP+ / 4 × 10GbE SFP+"
+      },
+      {
+        "label": "Storage",
+        "value": "1.92TB Enterprise Read-Intensive SSD"
+      },
+      {
+        "label": "Operating System",
+        "value": "RouterOS Level 6 License"
+      },
+      {
+        "label": "Bandwidth Capacity",
+        "value": "30+ Gbps Carrier Grade Bandwidth"
+      }
+    ],
+    "features": [
+      "Extreme Core density for massive multi-VRF and MPLS routing",
+      "40G QSFP+ uplink connectivity ready for next-gen ISP backbones",
+      "Enterprise server grade build with redundant platinum power supplies",
+      "Comprehensive warranty & local technical engineering support in Dhaka"
+    ],
+    "description": "Built for top-tier telecommunications and regional internet exchange backbones, the FNS X56 delivers effortless 30G+ routing and line-rate multi-gigabit filtering."
+  },
+  {
+    "id": "fns-x64",
+    "slug": "fns-x64-enterprise-pc-mikrotik",
+    "name": "FNS X64 Enterprise PC MikroTik Router Server",
+    "category": "pc-mikrotik",
+    "categoryName": "PC MikroTik Router Servers",
+    "brand": "MikroTik / FNS",
+    "price": "Price on Request",
+    "image": "assets/images/Inovexa_X64_Enterprise_MikroTik_Router_Server-v2.webp",
+    "badge": "Ultimate Power",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Dual Intel Xeon E5-2683 V4 (64 Cores)"
+      },
+      {
+        "label": "Memory",
+        "value": "128GB - 256GB DDR4 ECC RAM"
+      },
+      {
+        "label": "Networking",
+        "value": "4 × 10GbE SFP+ + 2 × 40GbE QSFP+"
+      },
+      {
+        "label": "Storage",
+        "value": "2TB Enterprise NVMe Storage"
+      },
+      {
+        "label": "Operating System",
+        "value": "RouterOS Level 6 License"
+      }
+    ],
+    "features": [
+      "64 High-efficiency cores tackling immense subscriber state tables",
+      "Full redundant power, fans, and optical transceivers",
+      "24/7 Stress-tested before delivery with real-world packet streams"
+    ],
+    "description": "The FNS X64 delivers staggering computing horsepower, ideal for national broadband operators and large universities with complex routing architectures."
+  },
+  {
+    "id": "fns-x72",
+    "slug": "fns-x72-enterprise-pc-mikrotik",
+    "name": "FNS X72 Enterprise PC MikroTik Router Server",
+    "category": "pc-mikrotik",
+    "categoryName": "PC MikroTik Router Servers",
+    "brand": "MikroTik / FNS",
+    "price": "Price on Request",
+    "image": "assets/images/Inovexa_X72_Enterprise_MikroTik_Router_Server-v2.webp",
+    "badge": "Data Center Tier",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Dual Intel Xeon E5-2697 V4 (72 Cores)"
+      },
+      {
+        "label": "Memory",
+        "value": "256GB DDR4 ECC Registered RAM"
+      },
+      {
+        "label": "Networking",
+        "value": "8 × 10GbE SFP+ & 2 × 40GbE QSFP+"
+      },
+      {
+        "label": "Storage",
+        "value": "2TB Enterprise SAS/SATA Enterprise SSD"
+      },
+      {
+        "label": "Operating System",
+        "value": "RouterOS Level 6 License"
+      }
+    ],
+    "features": [
+      "Massive 72-core multi-threaded processing power",
+      "Handles 20,000+ active PPPoE / IPoE customer sessions simultaneously",
+      "Redundant 1100W Titanium hot-plug power supplies"
+    ],
+    "description": "Delivering extreme multi-core density, the FNS X72 is engineered for Tier-2 ISPs and massive cloud hosting providers."
+  },
+  {
+    "id": "fns-x88",
+    "slug": "fns-x88-enterprise-pc-mikrotik",
+    "name": "FNS X88 Enterprise PC MikroTik Router Server",
+    "category": "pc-mikrotik",
+    "categoryName": "PC MikroTik Router Servers",
+    "brand": "MikroTik / FNS",
+    "price": "Price on Request",
+    "image": "assets/images/Inovexa_X88_Enterprise_MikroTik_Router_Server-v2.webp",
+    "badge": "Supreme Flagship 88-Core",
+    "specs": [
+      {
+        "label": "Processor",
+        "value": "Dual Intel Xeon E5-2699 V4 (88 Cores, Dual Gen 9)"
+      },
+      {
+        "label": "Memory",
+        "value": "256GB - 512GB DDR4 ECC Registered RAM"
+      },
+      {
+        "label": "Networking",
+        "value": "2 × Intel X520-DA2 Dual-Port 10GbE SFP+ & 40GbE QSFP+"
+      },
+      {
+        "label": "Storage",
+        "value": "3.84TB Enterprise NVMe High-Endurance Array"
+      },
+      {
+        "label": "Operating System",
+        "value": "RouterOS Level 6 License"
+      }
+    ],
+    "features": [
+      "The most powerful PC MikroTik Router build in Bangladesh",
+      "88 Processing Cores executing complex BGP, OSPF, MPLS and Queuing",
+      "Industrial redundant power subsystems and ultra-durable cooling matrix"
+    ],
+    "description": "The FNS X88 Enterprise PC MikroTik Router Server stands at the pinnacle of networking performance in Bangladesh, delivering ultimate peace of mind for massive telecom backbones."
+  },
+  {
+    "id": "dell-r630",
+    "slug": "dell-poweredge-r630",
+    "name": "Dell PowerEdge R630 1U Rack Server",
+    "category": "servers",
+    "categoryName": "Servers & Systems",
+    "brand": "Dell EMC",
+    "price": "Price on Request",
+    "image": "assets/images/dell_R630.webp",
+    "badge": "1U High Density",
+    "specs": [
+      {
+        "label": "Form Factor",
+        "value": "1U Rackmount Server"
+      },
+      {
+        "label": "Processor Support",
+        "value": "Dual Intel Xeon E5-2600 V3/V4 Series"
+      },
+      {
+        "label": "Memory Slots",
+        "value": "24 DIMM Slots (Up to 1.5TB DDR4)"
+      },
+      {
+        "label": "Drive Bays",
+        "value": "Up to 10 × 2.5\" SAS/SATA/SSD Drives"
+      },
+      {
+        "label": "Power Supply",
+        "value": "Redundant Hot-Plug 495W / 750W / 1100W"
+      },
+      {
+        "label": "Remote Management",
+        "value": "iDRAC8 Enterprise with Dedicated NIC"
+      }
+    ],
+    "features": [
+      "Ultra-dense 1U dual-socket computing platform",
+      "Ideal for virtualization (VMware ESXi, Proxmox VE, Hyper-V)",
+      "High energy efficiency with 80 PLUS Platinum certification",
+      "Complete chassis rail kit and front bezel included"
+    ],
+    "description": "The Dell PowerEdge R630 delivers uncompromising 2-socket virtualization and database performance in a space-saving 1U rack profile."
+  },
+  {
+    "id": "dell-r730",
+    "slug": "dell-poweredge-r730",
+    "name": "Dell PowerEdge R730 2U Rack Server",
+    "category": "servers",
+    "categoryName": "Servers & Systems",
+    "brand": "Dell EMC",
+    "price": "Price on Request",
+    "image": "assets/images/Dell_Poweredge_R730.webp",
+    "badge": "Best Seller",
+    "specs": [
+      {
+        "label": "Form Factor",
+        "value": "2U Rackmount Server"
+      },
+      {
+        "label": "Processor",
+        "value": "Dual Intel Xeon E5-2600 V3/V4"
+      },
+      {
+        "label": "Memory",
+        "value": "24 DDR4 DIMMs (Up to 3TB)"
+      },
+      {
+        "label": "Drive Bays",
+        "value": "16 × 2.5\" or 8 × 3.5\" Drive Bays"
+      },
+      {
+        "label": "PCIe Expansion",
+        "value": "Up to 7 PCIe 3.0 Slots"
+      },
+      {
+        "label": "RAID Controller",
+        "value": "PERC H730P 2GB NV Cache"
+      }
+    ],
+    "features": [
+      "Massive memory capacity and storage expandability",
+      "Supports full-length high-power PCIe GPU accelerators & NICs",
+      "Dual redundant hot-swap power supplies",
+      "Clean refurbished/imported condition with full warranty"
+    ],
+    "description": "The workhorse of modern enterprise data centers, the Dell PowerEdge R730 is the premier choice for virtualization, ERP hosting, and network service consolidation."
+  },
+  {
+    "id": "dell-r740",
+    "slug": "dell-poweredge-r740",
+    "name": "Dell PowerEdge R740 2U Rack Server",
+    "category": "servers",
+    "categoryName": "Servers & Systems",
+    "brand": "Dell EMC",
+    "price": "Price on Request",
+    "image": "assets/images/Dell_PowerEdge_R740.webp",
+    "badge": "14th Gen Intel Scalable",
+    "specs": [
+      {
+        "label": "Form Factor",
+        "value": "2U Rackmount Server"
+      },
+      {
+        "label": "Processor Support",
+        "value": "Dual 1st/2nd Gen Intel Xeon Scalable (Bronze, Silver, Gold, Platinum)"
+      },
+      {
+        "label": "Memory Slots",
+        "value": "24 DDR4 DIMMs (Up to 3TB RDIMM/LRDIMM)"
+      },
+      {
+        "label": "Storage Bays",
+        "value": "Up to 16 × 2.5\" SAS/SATA/NVMe SSDs"
+      },
+      {
+        "label": "Remote Management",
+        "value": "iDRAC9 Enterprise with HTML5 Console"
+      },
+      {
+        "label": "Expansion",
+        "value": "Up to 8 PCIe Gen3 Slots"
+      }
+    ],
+    "features": [
+      "Next-generation computing with Intel Xeon Scalable architecture",
+      "Native NVMe SSD direct-attach backplane options",
+      "Automated server lifecycle management with OpenManage",
+      "Zero-downtime reliability with redundant hot-plug components"
+    ],
+    "description": "Accelerate application performance and modernize your IT stack with the 14th Generation Dell PowerEdge R740, built for demanding enterprise AI, database, and private cloud workloads."
+  },
+  {
+    "id": "dell-r640",
+    "slug": "dell-poweredge-r640",
+    "name": "Dell PowerEdge R640 1U Dual-Socket Rack Server",
+    "category": "servers",
+    "categoryName": "Servers & Systems",
+    "brand": "Dell EMC",
+    "price": "Price on Request",
+    "image": "assets/images/Dell_PowerEdge_R640-476x476.jpg.webp",
+    "badge": "14th Gen Dense",
+    "specs": [
+      {
+        "label": "Form Factor",
+        "value": "1U Dual-Socket Rackmount"
+      },
+      {
+        "label": "Processor",
+        "value": "Dual Intel Xeon Scalable Processors"
+      },
+      {
+        "label": "Memory",
+        "value": "24 DDR4 DIMM Slots (Up to 3TB)"
+      },
+      {
+        "label": "Drive Bays",
+        "value": "10 × 2.5\" Hot-plug Drives"
+      },
+      {
+        "label": "RAID",
+        "value": "Dell PERC H740P Mini Controller"
+      }
+    ],
+    "features": [
+      "Unmatched dense computing power for hyperscale data centers",
+      "Enhanced cyber-resilient server architecture",
+      "Multi-vector cooling with advanced energy monitoring"
+    ],
+    "description": "Compact yet immensely potent, the Dell PowerEdge R640 1U server delivers dense computing and storage in a minimal datacenter footprint."
+  },
+  {
+    "id": "micron-16gb-ram",
+    "slug": "micron-16gb-ddr3l-ecc-ram",
+    "name": "Micron 16GB DDR3L ECC Registered Server Memory",
+    "category": "servers",
+    "categoryName": "Servers & Systems",
+    "brand": "Micron",
+    "price": "Price on Request",
+    "image": "assets/images/Micron_16GB_DDR3L_PC3-12800R_Registered_ECC_Server_Memory.webp",
+    "badge": "Original OEM",
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "16GB Module"
+      },
+      {
+        "label": "Speed",
+        "value": "PC3-12800R (DDR3L-1600MHz)"
+      },
+      {
+        "label": "Form Factor",
+        "value": "240-pin Registered DIMM (RDIMM)"
+      },
+      {
+        "label": "Voltage",
+        "value": "1.35V Low Voltage / 1.5V"
+      },
+      {
+        "label": "Error Correction",
+        "value": "ECC (Error-Correcting Code)"
+      }
+    ],
+    "features": [
+      "Genuine Micron enterprise grade server memory",
+      "100% tested and verified in Dell PowerEdge and HP ProLiant servers",
+      "Guarantees system stability for 24/7 mission-critical operations"
+    ],
+    "description": "Original Micron 16GB DDR3L 1600MHz ECC Registered RDIMM server memory, engineered for flawless error-correcting computing in enterprise server platforms."
+  },
+  {
+    "id": "cisco-n9k-93180yc-ex",
+    "slug": "cisco-nexus-93180yc-ex",
+    "name": "Cisco Nexus N9K-C93180YC-EX Network Switch",
+    "category": "switches-routers",
+    "categoryName": "Switches & Routers",
+    "brand": "Cisco",
+    "price": "Price on Request",
+    "image": "assets/images/Cisco_Nexus_N9K_C93180YC_EX.webp",
+    "badge": "100G / 40G Core",
+    "specs": [
+      {
+        "label": "Downlink Ports",
+        "value": "48 × 1/10/25-Gbps SFP28 Ports"
+      },
+      {
+        "label": "Uplink Ports",
+        "value": "6 × 40/100-Gbps QSFP28 Ports"
+      },
+      {
+        "label": "Throughput",
+        "value": "3.6 Tbps Bandwidth Capacity"
+      },
+      {
+        "label": "Forwarding Rate",
+        "value": "2.6 Bpps (Billion Packets Per Sec)"
+      },
+      {
+        "label": "Latency",
+        "value": "Sub-microsecond wire-rate latency"
+      },
+      {
+        "label": "Features",
+        "value": "VXLAN, EVPN, ACI Spine/Leaf, Multi-speed"
+      }
+    ],
+    "features": [
+      "Carrier-grade data center switch with wire-speed 100G uplinks",
+      "Dual redundant hot-swappable AC power supplies and fan trays",
+      "Comprehensive telemetry and packet flow visibility",
+      "Supports Cisco NX-OS or ACI mode deployment"
+    ],
+    "description": "The Cisco Nexus 93180YC-EX is an industry-leading 1U fixed-configuration switch delivering 3.6 Tbps of line-rate forwarding for core telecom routing, leaf-spine fabrics, and high-density ISP aggregation."
+  },
+  {
+    "id": "cisco-n540x",
+    "slug": "cisco-n540x-16z4g8q2c-d-router",
+    "name": "Cisco N540X-16Z4G8Q2C-D Router",
+    "category": "switches-routers",
+    "categoryName": "Switches & Routers",
+    "brand": "Cisco",
+    "price": "Price on Request",
+    "image": "assets/images/Cisco_N540X-16Z8Q2C-D.webp",
+    "badge": "Carrier Edge",
+    "specs": [
+      {
+        "label": "Architecture",
+        "value": "Cisco NCS 540 Series Router"
+      },
+      {
+        "label": "Ports",
+        "value": "16 × 10G SFP+ / 4 × 1G / 8 × 25G / 2 × 100G QSFP28"
+      },
+      {
+        "label": "Operating System",
+        "value": "Cisco IOS XR Software"
+      },
+      {
+        "label": "Power",
+        "value": "Redundant DC/AC Power Supply options"
+      }
+    ],
+    "features": [
+      "High-density 100G/25G carrier aggregation edge router",
+      "Segment Routing, MPLS, EVPN, and advanced BGP routing",
+      "Hardened for extreme temperature environments and telecommunication POPs"
+    ],
+    "description": "The Cisco Network Convergence System 540 is designed for cost-effective delivery of 5G, ISP metro aggregation, and high-density business services."
+  },
+  {
+    "id": "juniper-mx80",
+    "slug": "juniper-mx80",
+    "name": "Juniper MX80 3D Universal Edge Router",
+    "category": "switches-routers",
+    "categoryName": "Switches & Routers",
+    "brand": "Juniper Networks",
+    "price": "Price on Request",
+    "image": "assets/images/juniper_mx80.webp",
+    "badge": "Telecom Proven",
+    "specs": [
+      {
+        "label": "Fixed Ports",
+        "value": "4 × 10GbE XFP Ports"
+      },
+      {
+        "label": "MIC Slots",
+        "value": "2 Modular Interface Card (MIC) Slots"
+      },
+      {
+        "label": "Throughput",
+        "value": "80 Gbps Full Duplex Bandwidth"
+      },
+      {
+        "label": "OS",
+        "value": "Junos OS with Complete Routing Engine"
+      }
+    ],
+    "features": [
+      "Legendary Junos routing engine reliability and stability",
+      "Extensive BGP, MPLS, VPLS, and Layer 2/Layer 3 VPN features",
+      "Compact 2U form factor with redundant power and fans"
+    ],
+    "description": "The Juniper MX80 Universal Edge Router is a flexible, full-featured edge solution for service providers and enterprise networks requiring rock-solid routing tables and carrier-class uptime."
+  },
+  {
+    "id": "xikestor-sks8300",
+    "slug": "xikestor-sks8300-12x-10g-sfp-switch",
+    "name": "XikeStor SKS8300-12X 12-Port 10G SFP+ L3 Web Managed Switch",
+    "category": "switches-routers",
+    "categoryName": "Switches & Routers",
+    "brand": "XikeStor",
+    "price": "Price on Request",
+    "image": "assets/images/XikeStor_SKS8300-12X.webp",
+    "badge": "Budget 10G Star",
+    "specs": [
+      {
+        "label": "Ports",
+        "value": "12 × 10G/1G SFP+ Ports + 1 × RJ45 Console"
+      },
+      {
+        "label": "Switching Capacity",
+        "value": "240 Gbps Wire-Speed"
+      },
+      {
+        "label": "Forwarding Rate",
+        "value": "178.56 Mpps"
+      },
+      {
+        "label": "Management",
+        "value": "Layer 3 Web Managed, CLI, Telnet, SNMP"
+      }
+    ],
+    "features": [
+      "Extremely cost-effective 12-port 10GbE all-optical switch",
+      "Supports Static Routing, VLAN (802.1Q), QoS, Link Aggregation (LACP)",
+      "Silent cooling fans, ideal for office racks or ISP distribution cabinets"
+    ],
+    "description": "The XikeStor SKS8300-12X delivers 12 dedicated 10-Gigabit SFP+ optical ports with Layer 3 web management, making 10G optical networking accessible for every ISP and enterprise budget."
+  },
+  {
+    "id": "cisco-nexus-3064pq",
+    "slug": "cisco-nexus-3064pq-10gx",
+    "name": "Cisco Nexus N3K-C3064PQ-10GX Network Switch",
+    "category": "switches-routers",
+    "categoryName": "Switches & Routers",
+    "brand": "Cisco",
+    "price": "Price on Request",
+    "image": "assets/images/cisco_nexus_n3k.webp",
+    "badge": "Low Latency",
+    "specs": [
+      {
+        "label": "Ports",
+        "value": "48 × 1/10G SFP+ Ports + 4 × 40G QSFP+ Ports"
+      },
+      {
+        "label": "Throughput",
+        "value": "1.28 Tbps Switching Capacity"
+      },
+      {
+        "label": "Latency",
+        "value": "Ultra-low latency (< 1 microsecond)"
+      },
+      {
+        "label": "Form Factor",
+        "value": "1RU Compact Rackmount"
+      }
+    ],
+    "features": [
+      "High-density 10G/40G wire-speed switching",
+      "Redundant AC/DC power supplies and reversible fan airflow",
+      "Comprehensive Layer 2 and Layer 3 routing protocols"
+    ],
+    "description": "The Cisco Nexus 3064PQ-10GX is a high-density, ultra-low-latency 1U Ethernet switch offering 48 10GbE ports and 4 40GbE uplinks for algorithmic trading, cloud hosting, and ISP core aggregation."
+  },
+  {
+    "id": "intel-x710-da2",
+    "slug": "intel-x710-da2",
+    "name": "Intel Ethernet Converged X710-DA2 Dual-Port 10GbE SFP+ Network Adapter",
+    "category": "network-adapters",
+    "categoryName": "Network Adapters",
+    "brand": "Intel",
+    "price": "Price on Request",
+    "image": "assets/images/Intel_Ethernet_Converged_Network_Adapter_X710-DA2_Dual-Port_10GbE_SFP-plus.webp",
+    "badge": "ISP Recommended",
+    "specs": [
+      {
+        "label": "Controller",
+        "value": "Intel Ethernet Controller X710-BM2"
+      },
+      {
+        "label": "Interface",
+        "value": "Dual SFP+ Ports (10GbE / 1GbE)"
+      },
+      {
+        "label": "Bus Interface",
+        "value": "PCIe 3.0 ×8"
+      },
+      {
+        "label": "Compatibility",
+        "value": "MikroTik RouterOS v7, Linux, VMware ESXi, Windows Server"
+      }
+    ],
+    "features": [
+      "Industry standard 10G server adapter with low power consumption",
+      "Full hardware offload for checksum, segmentation, and virtualization",
+      "Native plug-and-play support in MikroTik RouterOS v7 PC servers"
+    ],
+    "description": "The Intel X710-DA2 dual-port 10GbE server adapter provides outstanding performance for virtualization, ISP routing, and enterprise LAN aggregation."
+  },
+  {
+    "id": "supermicro-aoc-stgn-i2s",
+    "slug": "supermicro-aoc-stgn-i2s-rev-211",
+    "name": "Supermicro AOC-STGN-i2S Rev. 2.11 Dual-Port 10GbE SFP+ Network Adapter",
+    "category": "network-adapters",
+    "categoryName": "Network Adapters",
+    "brand": "Supermicro",
+    "price": "Price on Request",
+    "image": "assets/images/Supermicro_AOC-STGN-i2S_Dual_Port_10GbE_SFP-plus_PCIe_Server_Network_Adapter__Intel_82599ES__Rev._2.11_.webp",
+    "badge": "Proven 82599ES",
+    "specs": [
+      {
+        "label": "Chipset",
+        "value": "Intel 82599ES 10 Gigabit Controller"
+      },
+      {
+        "label": "Ports",
+        "value": "2 × 10G SFP+ Ports"
+      },
+      {
+        "label": "Slot Type",
+        "value": "PCIe 2.0 ×8 (Gen 3 compatible)"
+      },
+      {
+        "label": "Bracket",
+        "value": "Full-Height & Low-Profile Brackets"
+      }
+    ],
+    "features": [
+      "Legendary Intel 82599ES chipset with maximum RouterOS v6 & v7 compatibility",
+      "Direct Attach Copper (DAC) and Optical SFP+ transceiver support",
+      "Low latency packet processing for high-volume ISP traffic shaping"
+    ],
+    "description": "Featuring the trusted Intel 82599ES controller, the Supermicro AOC-STGN-i2S is revered among network engineers for rock-solid stability and zero packet drops in PC MikroTik router builds."
+  },
+  {
+    "id": "dell-mellanox-cx512f",
+    "slug": "dell-mellanox-connectx5-cx512f",
+    "name": "Dell Mellanox ConnectX-5 CX512F Dual-Port 10/25GbE Network Adapter",
+    "category": "network-adapters",
+    "categoryName": "Network Adapters",
+    "brand": "Mellanox / NVIDIA",
+    "price": "Price on Request",
+    "image": "assets/images/Dell_Mellanox_ConnectX-5_CX512F_Dual-Port_1025GbE_Network_Adapter.webp",
+    "badge": "25G Ready",
+    "specs": [
+      {
+        "label": "Speeds",
+        "value": "Dual-Port 10GbE / 25GbE SFP28"
+      },
+      {
+        "label": "Controller",
+        "value": "Mellanox ConnectX-5 EN"
+      },
+      {
+        "label": "Bus Type",
+        "value": "PCIe 3.0 / 4.0 ×8 / ×16"
+      },
+      {
+        "label": "Features",
+        "value": "RoCE v2, Hardware NVGRE / VXLAN offload"
+      }
+    ],
+    "features": [
+      "Up to 25Gbps per port line-rate throughput",
+      "Hardware offloads for software-defined networking and NVMe-oF",
+      "Full compatibility with Dell PowerEdge 13th & 14th gen servers"
+    ],
+    "description": "Experience ultra-fast 25-Gigabit Ethernet connectivity with the Dell Mellanox ConnectX-5 CX512F adapter, ideal for high-frequency trading, cloud storage, and next-generation ISP cores."
+  },
+  {
+    "id": "mellanox-cx3-pro-40g",
+    "slug": "mellanox-40g-dual-sfp",
+    "name": "Mellanox ConnectX-3 Pro EN Dual-Port 40GbE QSFP+ Network Adapter",
+    "category": "network-adapters",
+    "categoryName": "Network Adapters",
+    "brand": "Mellanox / NVIDIA",
+    "price": "Price on Request",
+    "image": "assets/images/Mellanox_ConnectX-3_Pro_Dual-Port_40GbE_QSFP_Network_Adapter.webp",
+    "badge": "40G QSFP+",
+    "specs": [
+      {
+        "label": "Ports",
+        "value": "2 × 40GbE QSFP+ Ports"
+      },
+      {
+        "label": "Controller",
+        "value": "Mellanox ConnectX-3 Pro EN MCX314A-BCCT"
+      },
+      {
+        "label": "Interface",
+        "value": "PCIe 3.0 ×8"
+      }
+    ],
+    "features": [
+      "Massive 80Gbps aggregate bandwidth capacity",
+      "Hardware-based overlay network offloads (VXLAN, NVGRE)",
+      "Breakout cable support (40G to 4 × 10G SFP+)"
+    ],
+    "description": "The Mellanox ConnectX-3 Pro Dual-Port 40GbE network adapter provides high-bandwidth, sub-microsecond latency interconnects for clustered computing, high-speed routing, and storage fabrics."
+  },
+  {
+    "id": "silicom-pe310g4i71lb",
+    "slug": "silicom-pe310g4i71lb-xr-dell-oem",
+    "name": "Silicom PE310G4I71LB-XR Quad-Port 10GbE SFP+ Server Network Adapter (Dell OEM)",
+    "category": "network-adapters",
+    "categoryName": "Network Adapters",
+    "brand": "Silicom / Dell",
+    "price": "Price on Request",
+    "image": "assets/images/Silicom_Quad-Port_10GbE_SFP-plus_Server_Network_Adapter.webp",
+    "badge": "Quad 10G Ports",
+    "specs": [
+      {
+        "label": "Ports",
+        "value": "4 × 10GbE SFP+ Optical Ports"
+      },
+      {
+        "label": "Chipset",
+        "value": "Intel X710 Quad Controller"
+      },
+      {
+        "label": "Interface",
+        "value": "PCIe 3.0 ×8"
+      }
+    ],
+    "features": [
+      "Four 10G SFP+ ports on a single PCIe card — saves chassis expansion slots",
+      "Dell OEM firmware with full diagnostics support",
+      "Extensively deployed in Bangladesh ISP servers for multi-link aggregation"
+    ],
+    "description": "The Silicom Quad-Port 10GbE SFP+ server adapter provides 4 high-speed optical ports in a single PCIe card, maximizing network density in 1U and 2U rack servers."
+  },
+  {
+    "id": "intel-dc-s4500-240gb",
+    "slug": "intel-dc-s4500-240gb",
+    "name": "Intel SSD DC S4500 Series 240GB 2.5\" SATA Enterprise SSD",
+    "category": "storage",
+    "categoryName": "Storage & SSDs",
+    "brand": "Intel",
+    "price": "Price on Request",
+    "image": "assets/images/Intel_SSD_DC_S4500_Series_240GB_2.5_SATA_6Gbs_Enterprise_SSD.webp",
+    "badge": "Enterprise Endurance",
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "240GB"
+      },
+      {
+        "label": "Form Factor",
+        "value": "2.5-inch, 7mm SATA III (6 Gb/s)"
+      },
+      {
+        "label": "Sequential Read/Write",
+        "value": "500 MB/s / 190 MB/s"
+      },
+      {
+        "label": "Random 4KB Read/Write",
+        "value": "71,000 IOPS / 14,500 IOPS"
+      },
+      {
+        "label": "Endurance Rating",
+        "value": "0.9 PBW (Petabytes Written)"
+      },
+      {
+        "label": "Power Loss Protection",
+        "value": "Full Hardware PLP with onboard capacitors"
+      }
+    ],
+    "features": [
+      "Hardware Power Loss Protection ensures data integrity during power failures",
+      "Engineered for 24/7/365 continuous enterprise write workloads",
+      "Ideal boot and OS drive for RouterOS, VMware, and Linux servers"
+    ],
+    "description": "The Intel DC S4500 enterprise SSD is built with 3D TLC NAND and dedicated hardware power-loss protection, safeguarding mission-critical router configs and operating systems."
+  },
+  {
+    "id": "hpe-7-68tb-nvme",
+    "slug": "hpe-7-68tb-nvme-ssd",
+    "name": "HPE 7.68TB NVMe Gen4 High Read Intensive Enterprise SSD",
+    "category": "storage",
+    "categoryName": "Storage & SSDs",
+    "brand": "HPE",
+    "price": "Price on Request",
+    "image": "assets/images/HPE_7_68TB_NVMe_Gen4_High_Read_Intensive_SFF_BC_Enterprise_S.webp",
+    "badge": "Gen4 7.68TB Beast",
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "7.68TB"
+      },
+      {
+        "label": "Interface",
+        "value": "PCIe 4.0 ×4 NVMe"
+      },
+      {
+        "label": "Form Factor",
+        "value": "2.5\" SFF Basic Carrier (BC)"
+      },
+      {
+        "label": "Read Throughput",
+        "value": "Up to 6,900 MB/s"
+      }
+    ],
+    "features": [
+      "Massive enterprise solid state capacity in a single compact 2.5\" drive",
+      "PCIe Gen4 speed eliminates I/O bottlenecks in virtualization clusters",
+      "Digitally signed firmware and end-to-end data path protection"
+    ],
+    "description": "Designed for intensive database indexing, big data analytics, and cloud virtualization, the HPE 7.68TB NVMe Gen4 SSD delivers breathtaking speed and massive capacity."
+  },
+  {
+    "id": "dell-perc-h740p",
+    "slug": "dell-perc-h740p-mini-mono",
+    "name": "Dell PERC H740P Mini Mono RAID Controller (8GB NV Cache)",
+    "category": "storage",
+    "categoryName": "Storage & SSDs",
+    "brand": "Dell EMC",
+    "price": "Price on Request",
+    "image": "assets/images/Dell_PowerEdge_RAID_Controller_Battery___Card_Assembly.webp",
+    "badge": "8GB NV Cache",
+    "specs": [
+      {
+        "label": "Cache Memory",
+        "value": "8GB Non-Volatile Flash-Backed Cache"
+      },
+      {
+        "label": "Interface",
+        "value": "12Gb/s SAS / 6Gb/s SATA"
+      },
+      {
+        "label": "RAID Levels",
+        "value": "RAID 0, 1, 5, 6, 10, 50, 60"
+      },
+      {
+        "label": "Form Factor",
+        "value": "Mini Mono dedicated slot for 14G PowerEdge"
+      }
+    ],
+    "features": [
+      "8GB Non-Volatile battery-backed cache preserves write cache permanently",
+      "FastPath I/O acceleration for high-IOPS SSD arrays",
+      "Seamless management through Dell iDRAC9 OpenManage"
+    ],
+    "description": "The Dell PERC H740P Mini Mono RAID Controller is the highest-tier storage controller for 14th Gen Dell PowerEdge servers, delivering phenomenal write performance with 8GB NV cache."
+  },
+  {
+    "id": "intel-d3-s4510-1-92tb",
+    "slug": "intel-d3-s4510-1-92tb-ssd",
+    "name": "Intel SSD D3-S4510 Series 1.92TB SATA Enterprise SSD",
+    "category": "storage",
+    "categoryName": "Storage & SSDs",
+    "brand": "Intel",
+    "price": "Price on Request",
+    "image": "assets/images/Intel_SSD_D3-S4510_Series_1.92TB_2.5_SATA_6Gbs_Enterprise_SSD.webp",
+    "badge": "High Capacity 2TB",
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "1.92TB"
+      },
+      {
+        "label": "Interface",
+        "value": "SATA III 6Gb/s 2.5\""
+      },
+      {
+        "label": "Read / Write",
+        "value": "560 MB/s / 510 MB/s"
+      },
+      {
+        "label": "Endurance",
+        "value": "3.5 PBW (Petabytes Written)"
+      }
+    ],
+    "features": [
+      "Massive storage volume with enterprise endurance and reliability",
+      "Built-in power loss data protection and AES 256-bit encryption",
+      "Ideal for enterprise server virtualization and media streaming caches"
+    ],
+    "description": "Upgrade legacy HDD infrastructure to ultra-fast, power-efficient storage with the Intel D3-S4510 1.92TB enterprise SSD."
+  },
+  {
+    "id": "intel-dc-s3610-1-6tb",
+    "slug": "intel-dc-s3610-1-6tb-ssd",
+    "name": "Intel SSD DC S3610 Series 1.6TB SATA Enterprise SSD",
+    "category": "storage",
+    "categoryName": "Storage & SSDs",
+    "brand": "Intel",
+    "price": "Price on Request",
+    "image": "assets/images/Intel_SSD_DC_S3610_Series_1.6TB_2.5_SATA_6Gbs_Enterprise_SSD.webp",
+    "badge": "Mixed Workload",
+    "specs": [
+      {
+        "label": "Capacity",
+        "value": "1.6TB"
+      },
+      {
+        "label": "Interface",
+        "value": "2.5-inch SATA 6Gb/s"
+      },
+      {
+        "label": "Endurance",
+        "value": "High Endurance Mixed-Use Tier (3 DWPD)"
+      }
+    ],
+    "features": [
+      "Engineered for mixed read-write database intensive workloads",
+      "End-to-end CRC data protection and thermal throttle monitoring"
+    ],
+    "description": "The Intel DC S3610 1.6TB enterprise SSD offers extraordinary write endurance (3 Drive Writes Per Day), making it the premier choice for busy transactional databases."
+  }
+]
