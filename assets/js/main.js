@@ -737,8 +737,8 @@ function initBuilder() {
     const users = parseInt(usersSlider ? usersSlider.value : 2500);
     const bw = parseFloat(bandwidthSlider ? bandwidthSlider.value : 5);
 
-    if (usersVal) usersVal.textContent = `${users.toLocaleString()} Users`;
-    if (bandwidthVal) bandwidthVal.textContent = `${bw} Gbps`;
+    if (usersVal) usersVal.textContent = users.toLocaleString();
+    if (bandwidthVal) bandwidthVal.textContent = bw;
 
     // Smart Matching logic
     let rec = FNS.products.find(p => p.id === 'fns-x28');
@@ -774,44 +774,68 @@ function initBuilder() {
           localStorage.setItem('fns_orders', JSON.stringify(orders));
         } catch(e) {}
       };
-      resultCard.innerHTML = `
-        <div class="p-6 md:p-8 rounded-2xl border-2 border-blue-500/50 bg-gradient-to-br from-blue-950/20 via-zinc-950 to-slate-900 shadow-2xl relative overflow-hidden">
-          <div class="absolute top-0 right-0 px-4 py-1.5 bg-blue-600 text-white text-xs font-black uppercase tracking-wider rounded-bl-xl shadow-md">
-            Best Match Configuration
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-            <div class="md:col-span-5 flex flex-col items-center justify-center p-4 bg-white/5 rounded-xl border border-white/10">
-              <img src="${rec.image}" alt="${rec.name}" class="w-full max-h-56 object-contain drop-shadow-xl">
-              <span class="mt-3 text-xs font-bold text-blue-400">${rec.badge || 'Recommended for your load'}</span>
-            </div>
-            <div class="md:col-span-7 space-y-4">
-              <div>
-                <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Engineered for ${bw} Gbps & ${users.toLocaleString()} PPPoE Sessions</span>
-                <h3 class="text-xl md:text-2xl font-black text-white mt-1">${rec.name}</h3>
-                <p class="text-xs text-zinc-300 mt-2 leading-relaxed">${rec.description}</p>
-              </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-2">
-                ${rec.specs.map(s => `
-                  <div class="p-2 rounded-lg bg-white/5 border border-white/5">
-                    <span class="text-zinc-400 text-[11px] block">${s.label}</span>
-                    <span class="font-bold text-white">${s.value}</span>
+      resultCard.innerHTML = `
+        <div class="animate-in result-card-outer">
+
+          <!-- Card Header -->
+          <div class="result-header">
+            <div>
+              <p style="font-size:9px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:rgba(147,197,253,0.7);margin:0 0 3px;">Recommended Configuration</p>
+              <p style="font-size:11px;font-weight:700;color:rgba(147,197,253,0.5);margin:0;">Optimised for <strong style="color:#93c5fd;">${bw} Gbps</strong> &amp; <strong style="color:#93c5fd;">${users.toLocaleString()} Sessions</strong></p>
+            </div>
+            <span style="font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:4px;background:rgba(59,130,246,0.2);color:#93c5fd;border:1px solid rgba(59,130,246,0.3);">${rec.badge || 'Best Match'}</span>
+          </div>
+
+          <!-- Two-column layout: image + content -->
+          <div style="display:grid;grid-template-columns:1fr;gap:0;" class="sm-split">
+
+            <!-- Image Panel -->
+            <div style="padding:28px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-bottom:1px solid rgba(100,116,139,0.1);">
+              <img src="${rec.image}" alt="${rec.name}" style="max-height:180px;width:100%;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.35));">
+            </div>
+
+            <!-- Info Panel -->
+            <div style="padding:24px;">
+              <h3 style="font-size:17px;font-weight:900;letter-spacing:-0.01em;margin:0 0 6px;" class="dark-text-white res-title">${rec.name}</h3>
+              <p style="font-size:12px;line-height:1.6;color:#64748b;margin:0 0 20px;">${rec.description}</p>
+
+              <!-- Specs table -->
+              <div class="result-spec-row" style="border-radius:8px;overflow:hidden;border:1px solid rgba(100,116,139,0.12);margin-bottom:20px;">
+                ${rec.specs.map((s, i) => `
+                  <div class="result-spec-item" style="${i < rec.specs.length - 1 ? 'border-bottom:1px solid rgba(100,116,139,0.08);' : ''}">
+                    <span style="font-size:11px;color:#94a3b8;font-weight:600;">${s.label}</span>
+                    <span class="res-spec-val" style="font-size:11px;font-weight:800;text-align:right;max-width:55%;">${s.value}</span>
                   </div>
                 `).join('')}
               </div>
 
-              <div class="pt-4 border-t border-white/10 flex flex-wrap items-center gap-3">
-                <a href="https://wa.me/${FNS.contact.whatsapp}?text=${waText}" target="_blank" class="px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-[#25D366]/30 transition-transform active:scale-95">
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
-                  Get Instant WhatsApp Quote
+              <!-- CTA Buttons -->
+              <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+                <a href="https://wa.me/${FNS.contact.whatsapp}?text=${waText}" target="_blank" class="btn-wa">
+                  <svg style="width:14px;height:14px;flex-shrink:0;" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+                  WhatsApp Quote
                 </a>
-                <button class="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-blue-600/30 transition-transform active:scale-95" onclick="addToCart('${rec.id}')">
-                  + Add to Quote Cart
+                <button class="btn-quote" onclick="addToCart('${rec.id}')">
+                  <svg style="width:13px;height:13px;flex-shrink:0;" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                  Add to Cart
                 </button>
               </div>
             </div>
+
           </div>
         </div>
+
+        <style>
+          .dark .res-title { color: #f1f5f9 !important; }
+          .dark .res-spec-val { color: #f1f5f9 !important; }
+          html:not(.dark) .res-title { color: #0f172a !important; }
+          html:not(.dark) .res-spec-val { color: #0f172a !important; }
+          @media (min-width: 640px) {
+            .sm-split { grid-template-columns: 220px 1fr !important; }
+            .sm-split > div:first-child { border-bottom: none !important; border-right: 1px solid rgba(100,116,139,0.1) !important; }
+          }
+        </style>
       `;
     }
   }

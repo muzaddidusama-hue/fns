@@ -360,3 +360,122 @@ h1, h2, h3, h4, .font-heading {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* ==========================================================================
+   PC MikroTik Builder - International Enterprise Redesign Styles
+   ========================================================================== */
+
+/* Custom Range Slider Styling */
+.builder-range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 9999px;
+  background: #e2e8f0;
+  outline: none;
+  transition: all 0.2s ease;
+}
+.dark .builder-range-slider {
+  background: #1e293b;
+}
+.builder-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #2563eb;
+  cursor: pointer;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.dark .builder-range-slider::-webkit-slider-thumb {
+  border-color: #0f172a;
+}
+.builder-range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.65);
+}
+.builder-range-slider:active::-webkit-slider-thumb {
+  transform: scale(1.25);
+}
+.builder-range-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #2563eb;
+  cursor: pointer;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.dark .builder-range-slider::-moz-range-thumb {
+  border-color: #0f172a;
+}
+
+/* Preset Pills */
+.preset-pill {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+.preset-pill:hover {
+  transform: translateY(-1px);
+}
+.preset-pill.active {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Feature Toggle Card */
+.feature-card {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+.dark .feature-card {
+  border-color: rgba(39, 39, 42, 0.8);
+}
+.feature-card:has(input:checked) {
+  border-color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.05);
+}
+.dark .feature-card:has(input:checked) {
+  border-color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Structured Spec Quadrant Card */
+.spec-quadrant {
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+.spec-quadrant:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+/* Print Styles for Spec Sheet */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #builder-result-card, #builder-result-card * {
+    visibility: visible;
+  }
+  #builder-result-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
