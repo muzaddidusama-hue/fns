@@ -398,35 +398,32 @@ function renderCartDrawer() {
   `).join('');
 }
 
-window.sendWhatsAppQuote = function() {
+window.sendWhatsAppQuote = async function() {
   if (FNS.cart.length === 0) {
     showToast('Your quote cart is empty!');
     return;
   }
-  
+
   // Prompt or collect customer info
-  const custName = prompt("Please enter your Name or Company:", "Valued Client") || "Direct Customer";
+  const custName  = prompt("Please enter your Name or Company:", "Valued Client") || "Direct Customer";
   const custPhone = prompt("Please enter your Phone number for order tracking:", "01XXXXXXXXX") || FNS.contact.phone;
 
-  // Log order into fns_orders
-  try {
-    const orders = JSON.parse(localStorage.getItem('fns_orders')) || [];
-    const newOrder = {
-      id: "FNS-" + Math.floor(100000 + Math.random() * 900000),
-      customerName: custName,
-      customerPhone: custPhone,
-      customerEmail: "",
-      location: "Dhaka, Bangladesh",
-      items: FNS.cart.map(i => ({ name: i.name, qty: i.qty, category: i.category })),
-      totalItems: FNS.cart.reduce((s, i) => s + i.qty, 0),
-      note: "Quotation request submitted from Cart Drawer",
-      date: new Date().toISOString(),
-      status: "Pending"
-    };
-    orders.unshift(newOrder);
-    localStorage.setItem('fns_orders', JSON.stringify(orders));
-  } catch (e) {
-    console.error(e);
+  // Save order to Supabase
+  const newOrder = {
+    id:             "FNS-" + Math.floor(100000 + Math.random() * 900000),
+    customer_name:  custName,
+    customer_phone: custPhone,
+    customer_email: "",
+    location:       "Dhaka, Bangladesh",
+    items:          FNS.cart.map(i => ({ name: i.name, qty: i.qty, category: i.category })),
+    total_items:    FNS.cart.reduce((s, i) => s + i.qty, 0),
+    note:           "Quotation request submitted from Cart Drawer",
+    status:         "Pending"
+  };
+
+  if (window.fnsDb) {
+    const { error } = await window.fnsDb.from('orders').insert([newOrder]);
+    if (error) console.error('Supabase insert error (order):', error.message);
   }
 
   let msg = `Hello FNS - Faizan Network Solution,%0A%0AI would like to request an official quotation for the following items:%0A`;
@@ -435,7 +432,7 @@ window.sendWhatsAppQuote = function() {
   });
   msg += `%0AClient: ${encodeURIComponent(custName)} (${encodeURIComponent(custPhone)})%0APlease provide delivery time, pricing, and warranty details.%0AThank you!`;
   window.open(`https://wa.me/${FNS.contact.whatsapp}?text=${msg}`, '_blank');
-  showToast('Quotation logged! Opening WhatsApp...');
+  showToast('Quotation sent! Opening WhatsApp...');
 };
 
 // 8. Compare Modal Functionality
@@ -756,23 +753,19 @@ function initBuilder() {
 
     if (resultCard && rec) {
       const waText = encodeURIComponent(`Hello FNS - Faizan Network Solution, I used your PC MikroTik Router Builder for ${bw} Gbps and ${users} users. Recommended build: ${rec.name}. Please give me a quotation.`);
-      window.logBuilderOrder = function(recName, bwVal, usersVal) {
-        try {
-          const orders = JSON.parse(localStorage.getItem('fns_orders')) || [];
-          orders.unshift({
-            id: "FNS-" + Math.floor(100000 + Math.random() * 900000),
-            customerName: "Builder Client",
-            customerPhone: "01XXXXXXXXX",
-            customerEmail: "",
-            location: "Dhaka",
-            items: [{ name: recName, qty: 1, category: "PC MikroTik Builder" }],
-            totalItems: 1,
-            note: `Built for ${bwVal} Gbps and ${usersVal.toLocaleString()} PPPoE users`,
-            date: new Date().toISOString(),
-            status: "Pending"
-          });
-          localStorage.setItem('fns_orders', JSON.stringify(orders));
-        } catch(e) {}
+      window.logBuilderOrder = async function(recName, bwVal, usersVal) {
+        if (!window.fnsDb) return;
+        await window.fnsDb.from('orders').insert([{
+          id:             "FNS-" + Math.floor(100000 + Math.random() * 900000),
+          customer_name:  "Builder Client",
+          customer_phone: "01XXXXXXXXX",
+          customer_email: "",
+          location:       "Dhaka",
+          items:          [{ name: recName, qty: 1, category: "PC MikroTik Builder" }],
+          total_items:    1,
+          note:           `Built for ${bwVal} Gbps and ${usersVal.toLocaleString()} PPPoE users`,
+          status:         "Pending"
+        }]);
       };
 
       resultCard.innerHTML = `
@@ -869,34 +862,32 @@ function showToast(message) {
 }
 
 // Contact Form Submission Handler
-window.handleContactSubmit = function(event) {
+window.handleContactSubmit = async function(event) {
   event.preventDefault();
-  const form = event.target;
-  const name = form.querySelector('input[type="text"]')?.value || "Client";
-  const phone = form.querySelector('input[type="tel"]')?.value || "";
-  const email = form.querySelector('input[type="email"]')?.value || "";
-  const inputs = form.querySelectorAll('input[type="text"]');
+  const form    = event.target;
+  const name    = form.querySelector('input[type="text"]')?.value  || "Client";
+  const phone   = form.querySelector('input[type="tel"]')?.value   || "";
+  const email   = form.querySelector('input[type="email"]')?.value || "";
+  const inputs  = form.querySelectorAll('input[type="text"]');
   const subject = inputs.length > 1 ? inputs[1].value : "Hardware Inquiry";
   const message = form.querySelector('textarea')?.value || "";
 
-  try {
-    const messages = JSON.parse(localStorage.getItem('fns_messages')) || [];
-    const newMsg = {
-      id: "MSG-" + Math.floor(10000 + Math.random() * 90000),
-      name: name,
-      phone: phone,
-      email: email,
-      subject: subject,
-      message: message,
-      date: new Date().toISOString(),
-      status: "unread"
-    };
-    messages.unshift(newMsg);
-    localStorage.setItem('fns_messages', JSON.stringify(messages));
-  } catch (e) {
-    console.error(e);
+  const newMsg = {
+    id:      "MSG-" + Math.floor(10000 + Math.random() * 90000),
+    name:    name,
+    phone:   phone,
+    email:   email,
+    subject: subject,
+    message: message,
+    status:  "unread"
+  };
+
+  if (window.fnsDb) {
+    const { error } = await window.fnsDb.from('messages').insert([newMsg]);
+    if (error) console.error('Supabase insert error (message):', error.message);
   }
 
-  showToast('Thank you ' + name + '! Message submitted to FNS Admin.');
+  showToast('Thank you ' + name + '! Your message has been sent to FNS.');
   form.reset();
 };
+
